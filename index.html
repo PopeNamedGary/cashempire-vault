@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Brightline: Draw. Decide. Deliver.</title>
+    <link rel="icon" href="/static/favicon.ico">
+    <style>
+        body {
+            background-color: #000000;
+            color: #00FF80;
+            font-family: 'Segoe UI', sans-serif;
+            text-align: center;
+            padding: 2rem;
+        }
+        h1 {
+            color: #FFDD00;
+        }
+        input, button {
+            padding: 0.5rem;
+            font-size: 1rem;
+            margin: 0.5rem;
+        }
+        .result {
+            font-size: 1.5rem;
+            margin-top: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <h1>Brightline</h1>
+    <p>Draw. Decide. Deliver.</p>
+
+    <form method="POST">
+        <label>Min: <input type="number" name="min_val" value="1"></label>
+        <label>Max: <input type="number" name="max_val" value="50"></label>
+        <label>Count: <input type="number" name="count" value="1"></label>
+        <br>
+        <button type="submit">Draw Now</button>
+    </form>
+
+    {% if result %}
+        <div class="result">
+            <strong>Result:</strong> {{ result }}
+        </div>
+    {% endif %}
+</body>
+</html>
